@@ -56,6 +56,8 @@ namespace HashCompare
                 }
             }
 
+            fileList.Sort((x, y) => x.FileHash.CompareTo(y.FileHash));
+
             foreach (var file in fileList)
             {
                 if (file.Unique)
